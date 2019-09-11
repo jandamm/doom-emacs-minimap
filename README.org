@@ -13,18 +13,18 @@ A minimap for doom emacs
 [[file:screenshots/light.png]]
 
 ** Installation
-If your doom emacs configuration is under `git` version control you can use it
-as `git submodule`:
+If your doom emacs configuration is under ~git~ version control you can use it
+as ~git submodule~:
 #+BEGIN_SRC sh
 git submodule add -b master https://github.com/jandamm/doom-emacs-minimap.git modules/ui/minimap
 #+END_SRC
 
-Otherwise clone it in your configuration folder:
+Otherwise ~clone~ it in your configuration folder:
 #+BEGIN_SRC sh
 git clone https://github.com/jandamm/doom-emacs-minimap.git modules/ui/minimap
 #+END_SRC
 
-To activate it add `minimap` to your `init.el` in the `:ui` section.
+To activate it add ~minimap~ to your ~init.el~ in the ~:ui~ section.
 
 To activate the block font you have to install [[https://github.com/jandamm/doom-emacs-minimap/blob/master/blockfont.ttf][BlockFont]] manually to your system.
 
