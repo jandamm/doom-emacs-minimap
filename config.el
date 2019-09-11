@@ -10,6 +10,11 @@
  minimap-enlarge-certain-faces nil ; enlarge breaks BlockFont
  )
 
+(map!
+ (:leader
+   (:prefix-map ("t" . "toggle")
+     :desc "Toggle minimap" "m" #'+minimap-toggle)))
+
 ;; Disable modeline in minimap buffer
 (add-hook! 'minimap-sb-mode-hook #'hide-mode-line-mode)
 
