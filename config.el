@@ -7,6 +7,19 @@
  minimap-minimum-width 20 ; also slightly smaller minimap
  )
 
+;; Change colors of minimap
+(custom-set-faces
+ ;; Change background
+ '(minimap-active-region-background
+   ((((background dark)) (:background "#494949"))
+    (t (:background "#D6D6D6")))
+   :group 'minimap)
+ ;; Change current line
+ '(minimap-current-line-face
+   ((((background dark)) (:background "#7F7F7F"))
+    (t (:background "#ABABAB")))
+   :group 'minimap))
+
 ;; Enable minimap on startup
 (minimap-mode 1)
 
