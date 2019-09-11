@@ -5,7 +5,12 @@
  minimap-window-location 'right ; Minimap on the right side
  minimap-width-fraction 0.0 ; slightly smaller minimap
  minimap-minimum-width 20 ; also slightly smaller minimap
+
+ minimap-dedicated-window t ; seems to work better
  )
+
+;; Disable modeline in minimap buffer
+(add-hook! 'minimap-sb-mode-hook #'hide-mode-line-mode)
 
 ;; Change colors of minimap
 (custom-set-faces
