@@ -16,7 +16,7 @@ A minimap for doom emacs
 If your doom emacs configuration is under `git` version control you can use it
 as `git submodule`:
 #+BEGIN_SRC sh
-git submodule add https://github.com/jandamm/doom-emacs-minimap.git modules/ui/minimap
+git submodule add -b master https://github.com/jandamm/doom-emacs-minimap.git modules/ui/minimap
 #+END_SRC
 
 Otherwise clone it in your configuration folder:
