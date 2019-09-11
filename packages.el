@@ -1,3 +1,4 @@
 ;;; ui/minimap/packages.el -*- lexical-binding: t; -*-
 
-(package! minimap)
+(package! minimap :recipe (:host github
+                           :repo "dengste/minimap"))
