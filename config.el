@@ -18,7 +18,7 @@
 ;; Disable modeline in minimap buffer
 (add-hook! 'minimap-sb-mode-hook #'hide-mode-line-mode)
 
-;; Change appearance of minimap
+;; Change colors of minimap
 (custom-set-faces
  ;; Change background
  '(minimap-active-region-background
@@ -29,11 +29,11 @@
  '(minimap-current-line-face
    ((((background dark)) (:background "#7F7F7F"))
     (t (:background "#ABABAB")))
-   :group 'minimap)
-  '(minimap-font-face
-    ((((background dark)) (:family "BlockFont" :height 30))
-      (t (:family "BlockFont" :height 30)))
-    :group 'minimap))
+   :group 'minimap))
+
+;; Set Blockfont as minimap font
+(custom-set-faces!
+  '(minimap-font-face :family "BlockFont" :height 30 :group 'minimap))
 
 ;; Enable minimap on startup
 (minimap-mode 1)
