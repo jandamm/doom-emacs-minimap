@@ -1,5 +1,26 @@
 ;;; ui/minimap/config.el -*- lexical-binding: t; -*-
 
+(defun +minimap-set-highlight-line--on ()
+  (setq +minimap-highlight-line t)
+	(custom-set-faces!
+		'(minimap-current-line-face :background "#51AFEF" :group 'minimap)))
+
+(defun +minimap-set-highlight-line--off ()
+  (setq +minimap-highlight-line nil)
+	(custom-set-faces
+		'(minimap-current-line-face
+   ((((background dark)) (:background "#7F7F7F"))
+    (t (:background "#ABABAB")))
+   :group 'minimap)))
+
+(defcustom +minimap-highlight-line nil
+  "Whether minimap should highlight the current line more prominent."
+  :set (lambda (sym value)
+         (set sym value)
+         (if (null value) (+minimap-set-highlight-line--off) (+minimap-set-highlight-line--on)))
+  :type 'boolean
+  :group 'minimap)
+
 (setq
  ;; Configure minimap position
  minimap-window-location 'right ; Minimap on the right side
@@ -24,11 +45,6 @@
  '(minimap-active-region-background
    ((((background dark)) (:background "#494949"))
     (t (:background "#D6D6D6")))
-   :group 'minimap)
- ;; Change current line
- '(minimap-current-line-face
-   ((((background dark)) (:background "#7F7F7F"))
-    (t (:background "#ABABAB")))
    :group 'minimap))
 
 ;; Set Blockfont as minimap font
