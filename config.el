@@ -34,7 +34,10 @@
 (map!
  (:leader
    (:prefix-map ("t" . "toggle")
-     :desc "Toggle minimap" "m" #'+minimap-toggle)))
+     (:prefix-map ("m" . "minimap")
+     :desc "Toggle minimap" "m" #'+minimap-toggle
+     :desc "Toggle line highlighting" "l" #'+minimap-toggle-highlight-line))))
+
 
 ;; Disable modeline in minimap buffer
 (add-hook! 'minimap-sb-mode-hook #'hide-mode-line-mode)
