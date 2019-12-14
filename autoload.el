@@ -6,7 +6,7 @@
   (interactive)
   (if (null (minimap-get-window))
       (+minimap-toggle--on)
-    (+minimap-toggle-off)))
+    (+minimap-toggle--off)))
 
 (defun +minimap-toggle--on ()
   "Enable minimap"
